@@ -157,7 +157,7 @@ def code_area(request):
                 context={'folders':folders}
                 return render(request, 'folders.html',context)
 
-            context={'form':form, 'stdout':stdout}
+            context={'form':form, 'stdout':'\n'+stdout}
             #return HttpResponseRedirect('/code_area',context)  
             return render(request,'code_area.html',context)
             #new
@@ -295,7 +295,7 @@ def new_file(request,folder_id):
                     cli_subprocess = src_codefile+" "+cli_file+" "+infile+" "+outfile+" "+username
                     stdout=subprocess.run("python3 ./compilers/bash_compiler.py "+base+project_dir+" "+base+script_dir+" "+cli_subprocess,shell=True)
                 stdoutFile = open("./temp_files/"+username+".txt",'r')
-                stdout = stdoutFile.read()
+                stdout = '\n'+stdoutFile.read()
                 stdoutFile.close()
                 subprocess.run("rm -f "+"./temp_files/"+username+".txt",shell=True)
 
@@ -381,7 +381,7 @@ def edit_file(request,file_id):
                     cli_subprocess = src_codefile+" "+cli_file+" "+infile+" "+outfile+" "+username
                     stdout=subprocess.run("python3 ./compilers/bash_compiler.py "+base+project_dir+" "+base+script_dir+" "+cli_subprocess,shell=True)
                 stdoutFile = open("./temp_files/"+username+".txt",'r')
-                stdout = stdoutFile.read()
+                stdout = '\n'+stdoutFile.read()
                 stdoutFile.close()
                 subprocess.run("rm -f "+"./temp_files/"+username+".txt",shell=True)
 
