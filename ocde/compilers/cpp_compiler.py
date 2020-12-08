@@ -55,7 +55,8 @@ if(compiled.returncode==0):
 	# display any warnings
 	stdout+=compiled.stderr.decode()
 	# call the script to execute the executable
-	execute = subprocess.run("sudo docker exec "+container_id+" python3 /home"+script_dir[12:]+"/run_cpp.py "+executable +" "+"/home/"+infile[12:]+" "+"/home/" +outfile[12:]+" "+str(timelimit)+" /home/"+cli_file[12:],shell=True,check=True,capture_output=True
+	execute = subprocess.run("sudo docker exec "+container_id+" python3 /home"+script_dir[12:]+"/run_cpp.py "+executable +" "+"/home/"+infile[12:]+" "+"/home/" +outfile[12:]+" "+str(timelimit)+" /home/"+cli_file[12:],shell=True,check=True,capture_output=True)
+
 else:
 	#copy the compilation error to a file on host machine (uniquely identified by the username)
 	stdout = compiled.stderr.decode()
