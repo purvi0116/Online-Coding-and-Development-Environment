@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a style="padding:0 20px 0 20px;" href="/folders/{{folder.id}}/">{{folder}}</a>
+ <p style="padding:0 20px 0 20px;">Add a new file:</p>
+ <p style="padding:0 20px 0 20px;">Language : {{folder.language}}</p>
+ <form style="padding:0 20px 0 20px;" action="{{callBack_url}}" method="post">
+ 	{% csrf_token %}
+ 	{{ form.as_p }}
+ 	Stdout:
+ 	<textarea disabled name="Output" id="" cols="100" rows="10" value="Output">
+		{{ stdout }}
+	</textarea><br><br>
+	<button style="margin-left:70px;" type="submit" value="Save" name="_save">save changes</button>
+	<button type="submit" value="Run" name="_run">run code</button>
+	<button type="submit" value="Stop" name="_stop">stop code</button>
+	<button type="submit" value="Run File in Project" name="_runProject">run project</button>
+ </form><br><br>
+ <script src="/static/js/script.js"></script>
+{% endblock content %}

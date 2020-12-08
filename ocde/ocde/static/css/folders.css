@@ -1,0 +1,385 @@
+.folders-msg{
+    color:red;
+}
+#headline{
+    text-align: center;
+    color:#006400;
+    font-size: 1.5em;
+    padding-top:15px;
+}
+.main-card{
+	display:inline-block;
+    width:65%;
+    margin-top:20px;
+}
+
+.quote{
+	display:inline-block;
+	width:25%;
+	float: right;
+	background-color: #fff;
+	box-shadow: 1px 1px 10px #ad9d9d;
+	text-align: left;
+	font-size: 1.5em;
+	
+	margin-right: 5%;
+	margin-top:40px;
+	padding:20px 5px;
+	min-height:250px;
+	
+	
+
+}
+.topics{
+    width:100%;
+}
+.topic{
+   
+   width:100%;
+   
+   
+   margin-bottom: 15px;
+   
+   
+   
+}
+
+hr{
+    width:100%;
+	text-align:left;
+}
+.topic-link{
+    padding:15px;
+    font-size:1.25em;
+    display: inline-block;
+    width:50%;
+    float:left;
+    padding-bottom: 10px;
+    
+}
+
+.topic-date{
+    display: inline-block;
+	width:40%;
+	color:black;
+    float:left;
+    padding:15px;
+    padding-top:0px;
+    padding-bottom:5px;
+    clear:both;
+    
+    
+}
+.delete-topic {
+    margin:0px 10px 10px 10px;
+	display: inline-block;
+	width:20%;
+	
+	color:#008000;
+    float:right;
+    padding:15px;
+    
+    padding-left:10px;
+    text-align: right;
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+.edit-topic{
+    margin:0px 10px 10px 10px;
+	display: inline-block;
+    width:10%;
+    float:right;
+	
+    color:#008000;
+    padding:15px;
+    padding-left:15px;
+    padding-right:0px;
+    text-align: right;
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+
+.link{
+    text-decoration:none;
+    
+}
+
+.no-topic{
+	font-size: 1.25em;
+	padding:15px;
+	color:#008000;
+    
+	
+	width:100%;
+    margin-bottom:30px;
+    margin-top:20px;
+    padding-left: 15px;
+    text-align: center;
+}
+.add-new{
+    text-align: center;
+    clear:both;
+    margin-top:15px;
+    color:#006400
+}
+
+.files-card{
+    
+    display: inline-block;
+    margin:0;
+    width:100%;
+    padding:auto;
+}
+.file-card{
+     padding:15px;
+    
+    display: inline-block;
+    width:100%;
+    margin:auto;
+    margin-bottom:0px;
+    margin-top:0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.file-name{
+    padding:15px;
+    font-size:1.25em;
+    display: inline-block;
+    width:30%;
+    float:left;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    color:#008000;
+
+}
+.edit-file{
+    margin:0px 10px 10px 10px;
+    display: inline-block;
+    width:10%;
+    float:right;
+    
+    color:#008000;
+    padding:25px;
+    padding-left:15px;
+    padding-right:0px;
+    text-align: right;
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+
+.delete-file {
+    margin:0px 10px 10px 10px;
+    display: inline-block;
+    width:20%;
+    
+    color:#008000;
+    float:right;
+    padding:25px;
+    
+    padding-left:10px;
+    text-align: right;
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+
+.file-date{
+    display: inline-block;
+    width:40%;
+    color:#086972;
+    float:left;
+    padding:15px;
+    padding-top:0px;
+    padding-bottom:5px;
+    clear:both;
+    
+    
+}
+
+@media(max-width: 767px){
+	
+	
+	.main-card{
+		width:90%;
+	}
+
+    .topic{
+   
+        width:100%;
+        
+        
+        margin-bottom: 15px;
+        
+        
+        
+     }
+	.topics .topic{
+		width:100%;
+	}
+
+	.quote{
+	display:none;
+	
+}
+.file-card{
+    padding:15px;
+    margin:10px;
+    display: inline-block;
+    width:85%;
+    float:left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.delete-topic {
+    
+	display: inline-block;
+	width:10%;
+	
+	color:#008000;
+    float:right;
+    padding:15px;
+    
+    padding-left:15px;
+    text-align: right;
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+.edit-topic{
+    
+	display: inline-block;
+    width:10%;
+    float:right;
+	
+    color:#008000;
+    padding:15px;
+    padding-left:15px;
+    
+    text-align: right;
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+
+.no-topic{
+	font-size: 1.25em;
+	padding:15px;
+	color:#006400;
+    margin-left:5%;
+    text-align: center;
+	
+	width:90%;
+	margin-bottom:30px;
+	padding-left: 15px;
+}
+.no-file{
+	font-size: 1.25em;
+	padding:15px;
+	color:#006400;
+    margin-left:auto;
+    text-align: center;
+	
+    width:90%;
+    margin-top:20px;
+	margin-bottom:20px;
+	padding-left: 15px;
+}
+.new-link{
+	font-size: 1.25em;
+	padding:10px;
+	color:#006400;
+	margin-left:35%;
+	
+	width:auto;
+    padding-left: 15px;
+    text-align: center;
+}
+.new-link2{
+	font-size: 1.25em;
+	padding:10px;
+	color:#006400;
+	
+	margin-top:20px;
+	width:auto;
+    
+    text-align: center;
+}
+
+}
+
+@media(min-width: 768px){
+	.topic{
+   
+        width:100%;
+        margin-right:30%;
+        margin-left:20%;
+        margin-bottom: 15px;
+        
+        
+        
+     }
+     .files-card{
+    
+        display: inline-block;
+        margin:auto;
+        margin: auto;
+        padding:auto;
+    }
+    
+     .no-topic{
+        font-size: 1.25em;
+        
+        color:#006400;
+        margin-left:25%;
+        text-align: center;
+        
+        width:100%;
+        margin-bottom:30px;
+        padding-left: 0px;
+    }
+    .no-file{
+        font-size: 1.25em;
+        
+        color:#006400;
+        
+        text-align:center;
+        
+        width:100%;
+        margin-bottom:30px;
+        margin-top:30px;
+        
+    }
+  
+     .new-link{
+        font-size: 1.25em;
+        padding:20px;
+        color:#006400;
+        margin-left:65%;
+        
+        
+        width:100%;
+        padding-left: 15px;
+        text-align: center;
+    }
+
+    .new-link2{
+        font-size: 1.25em;
+        padding:20px;
+        color:#006400;
+        margin-left:auto;
+        
+        
+        width:100%;
+        
+        text-align: center;
+    }
+
+    
+    .add-new{
+        text-align: center;
+        clear:both;
+        padding-top:20px;
+        
+    }
+    
+}
+

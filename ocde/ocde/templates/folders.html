@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <div class='topics-card'>
+ 	<div id="headline">My Folders</div>
+	<div class="main-card">  
+	<div class="topics"><ul>
+	<div class="folders-msg">
+		{% for message in messages %}
+		<h2 class="err">{{ message }}</h2>
+		{% endfor %}
+	</div>
+	{% for folder in folders %}
+	  
+      
+      	<div class="topic">
+      		<div class="topic-link"><a href="/folders/{{folder.id}}" class="link">{{folder}}</a></div>
+      		
+      		<div class="topic-misc">
+				<div class="delete-topic"><a href='/delete_folder/{{folder.id}}' class="link">Delete</a></div>
+				<div class="edit-topic"><a href="/edit_folder/{{folder.id}}" class="link">Edit</a></div>
+      			<div class="topic-date">{{folder.date_added|date:'M d, Y H:i' }}</div>
+				
+			  </div>
+			  <hr>
+			  </div>
+			  
+      		
+      		{% empty %}
+      
+      	
+      	<div class="no-topic">No folders have been created yet</div>
+      
+      
+     {% endfor %} 
+   </ul></div>
+   <div ><a href="/new_folder2" class="link new-link">Create a new folder</a></div>
+</div>
+<!--<div class="quote">Keep Coding,<br> Keep Growing!</div>-->
+ </div>
+ 
+{% endblock content%}

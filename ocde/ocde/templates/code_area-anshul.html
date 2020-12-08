@@ -1,0 +1,71 @@
+ {% load static %}
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <script data-require="angularjs@1.3.6" data-semver="1.3.6" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.6/angular.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+     <!-- <script type="text/javascript" src="{% static 'ocde/behave.js' %}"></script>
+     <script type="text/javascript" src="{% static 'ocde/script.js' %}"></script> -->
+ <body>
+     <div class="topnav">
+         <a href='#'>HOME</a>
+         <a href='register'>REGISTER</a>
+         <a href='login'>LOGIN</a>
+     </div>
+     <form action="code_area" method="POST">
+         {% csrf_token %}
+         <!-- {{ form.as_p }} renders form as paragraph -->
+         <div class="wrapper">
+             <div class="container-fluid">
+                 <div class="lang">Language: {{ form.language }}</div><br>
+                 <div class="box">
+                     <div class="row">
+                         <div class="col">
+                             <!-- <div class="line-nums"><span>1</span></div> -->
+                             {{ form.code }}
+                         </div>
+                         <!--<div class="col out">
+                             {{ output }}
+                         </div>-->
+                     </div>
+                 </div>
+                 <!-- <br> -->
+                 <div class="box1">
+                     <div class="form-row">
+                         <div class="form-col">
+                             Command Line Interface: {{ form.Command_Line_Interface }}
+                         </div>
+                         <div class="col">
+                             {{ form.Command_Line }}
+                         </div>
+                     </div>
+                 </div>
+                 <input type="submit" name="" id="" value='Save'>
+             </div>
+         </div>
+     </form>
+ </body>
+ 
+ <script>
+     function togglerCLI(){
+         if($('#check').prop('checked')){
+             document.getElementById("CLI").style.visibility = "visible"
+             // console.log("Checked")
+         }
+         else{
+             document.getElementById("CLI").style.visibility = "hidden"
+             // console.log("Unchecked")
+         }
+     }
+     window.onload = togglerCLI
+ </script>
+ 
+
+ <div>
+    <textarea disabled name="Output" id="" cols="30" rows="10" value="Output">
+        {{ output }}
+    </textarea>
+</div>
+
+ 
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

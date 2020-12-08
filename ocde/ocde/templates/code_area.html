@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% block content %}
+<p >{{message}}</p>
+     <form style="padding:0 20px 0 20px;" action="code_area" method="POST">
+                 {% csrf_token %}
+			        {{ form.as_p }}
+		  Stdout:
+            <textarea disabled name="Output" id="" cols="100" rows="10" value="Output">
+				{{ stdout }}
+			</textarea><br><br>
+		
+		<button style="margin-left:70px;" type="submit" value="Run" name="_run">run code</button>
+        <button type="submit" value="Stop" name="_stop">stop code</button>
+        {% if user.is_authenticated %}
+        <button type="submit" value="Save" name="_save">save code file</button>
+        {% endif %}
+     </form><br><br>
+     <script src="/static/js/script.js"></script>
+     {% endblock content %}
+ 

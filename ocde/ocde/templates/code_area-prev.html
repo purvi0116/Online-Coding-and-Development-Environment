@@ -1,0 +1,81 @@
+<form action=""  method="POST">
+    {% csrf_token %}
+    {{ form.as_p }} <!-- renders form as paragraph -->
+    <input type="submit" name="" id="" value='Save'>
+</form>
+<div>
+    <textarea disabled name="Output" id="" cols="30" rows="10" value="Output">
+        {{ output }}
+    </textarea>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="random.css">
+        <link rel="stylesheet" type="text/css" href="rand.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+	<title>Code file</title>
+</head>
+<body>
+    
+    <div class="container">
+        <textarea id="w3review" placeholder="Write your Code here" name="w3review" rows="4" cols="50"></textarea><br>
+        <textarea id="w3review" placeholder="The Output will appear here" name="w3review" rows="2" cols="50"></textarea><br>
+        <label for="CLItoggle">Command Line Interface:</label>
+        <label class="switch">
+            <input type="checkbox" onclick="toggleCLI()">
+            <div>
+                <span></span>
+            </div>
+        </label><br>
+        <textarea disabled id="CLI" rows="2" cols="25"></textarea>
+    </div>
+    <script>
+        function toggleCLI() {
+            var Disabled = document.getElementById("CLI").disabled;
+            document.getElementById("CLI").disabled = !Disabled;
+        }
+    </script>
+    <script>
+        function toggler(){
+            if($('.checkbox').prop('checked')){
+                document.getElementById("CLI").style.visibility = "visible"
+                console.log("Visible Now")
+            }
+            else{
+                document.getElementById("CLI").style.visibility == "hidden"
+                console.log("Hidden Now")
+            }
+        }
+    </script> -->
+    <!-- <script>
+        if( $('.switch').prop('checked') ) {
+          console.log("status: 1");
+        } else {
+          console.log("status: 0");
+        }
+  </script> 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
+-->

@@ -1,0 +1,111 @@
+    /* Styles go here */
+
+    body{
+        text-align:center;
+        background: #76b852; /* fallback for old browsers */
+        background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+        background: -moz-linear-gradient(right, #76b852, #8DC26F);
+        background: -o-linear-gradient(right, #76b852, #8DC26F);
+        background: linear-gradient(to left, #76b852, #8DC26F);
+        font-family: "Roboto", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    #CLI {
+        visibility :hidden;
+    }
+    
+    .wrapper{
+        width: 60%;
+        height: 80%;
+        margin: 0 auto;
+    }
+    
+    div .lang{
+        text-align: left;
+        margin-top: 25px;
+    }
+    
+    #code{
+        margin:15px;
+        overflow:hidden;
+    }
+    
+    .box{
+        border: 1px solid #999;
+        /* background-color: #1b1b1b; */
+        border-radius: 10px;
+    }
+    
+    .out{
+        margin-top: 10px;
+        /* color: white; */
+    }
+    
+    .box1{
+        /* border:1px solid #999; */
+        padding:10px;
+        font-family: monospace;
+        margin:0;
+        display:block;
+        outline:none;
+    }
+    
+    textarea{
+        width:800px;
+        
+        /* The following three rules make a difference in the script */
+        overflow:hidden;
+        line-height: 13px;
+        font-size: 13px;
+                
+        border:1px solid #999;
+        padding:10px;
+        font-family: monospace;
+        margin:0;
+        display:block;
+        outline:none;
+    }
+    
+    /* textarea:focus{
+      border-color:#333;
+    } */
+    
+    .container{
+        position:relative;
+        display:inline-block;
+    }
+    
+    .line-nums{
+        font-size:13px;
+        line-height:13px;
+        padding:10px 4px;
+        font-family: monospace;
+        background: #EEE;
+        position: absolute;
+        width: 20px;
+        left: -28px;
+        bottom: 0;
+        top: 0;
+        text-align:right;
+        border:1px solid #999;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: #43A047;
+      }
+      
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }

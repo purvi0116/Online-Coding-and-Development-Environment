@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+	<title>Code file</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href='/' class='home'>HOME</a>
+        {% if user.is_authenticated %}
+        <a href='/logout'>LOGOUT</a>
+        <a href='/folders'>FOLDERS</a>
+        {% elif not user.is_authenticated %}
+        <a href='register'>REGISTER</a>
+        <a href='login'>LOGIN</a>
+        {% endif %}
+        <a href='/code_area'>CODE</a>
+    </div>
+    <div class='ocde'>
+        <h1>SEGMENTATION FAULT</h1>
+    </div>
+    <br>
+    <div class='welcome'>
+        <h6>Welcome to our Online Coding Environment <br> You can head over to Code to start coding <br> To save your work for future reference Register/Login</h6>
+    </div>
+</body>
+</html>

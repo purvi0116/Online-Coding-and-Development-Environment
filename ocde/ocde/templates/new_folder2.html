@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <p class="edit-folder">Add a new folder</p>
+ <div class="form">
+ <form action="/new_folder2" method="post" class="login-form">
+ 	{% csrf_token %}
+ 	{{ form.as_p }}
+ 	<button name="submit"> add folder </button>
+ </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/folders.css' %}">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+	<title>Code file</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href='/' class='home'>HOME</a>
+        {% if user.is_authenticated %}
+        <a href='/logout'>LOGOUT</a>
+        <a href='/folders'>FOLDERS</a>
+        {% elif not user.is_authenticated %}
+        <a href='register'>REGISTER</a>
+        <a href='login'>LOGIN</a>
+        {% endif %}
+        <a href='/code_area'>CODE</a>
+    </div>
+    {% block content %} {% endblock content %}
+</body>
+</html>

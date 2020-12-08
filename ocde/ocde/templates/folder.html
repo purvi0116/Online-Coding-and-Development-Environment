@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+ <div id="headline">Folder - {{ folder}}</div>
+         <div class="files-card">
+         
+         {% for file in files %}
+         
+         <div class="file-card">
+            <div class="file-name">{{ file.file_name|linebreaks }}</div>
+           
+           <div class="entry-side">
+            <div class="edit-file"><a href="/edit_file/{{file.id}}/" class="link">Edit</a></div>
+            <div class="delete-file"><a href="/delete_file/{{file.id}}/" class="link">Delete</a></div></div>
+            <div class="file-date">{{ file.date_added|date:'M d, Y H:i' }}</div>
+            <hr>
+         
+          
+         </div>
+         
+         
+            
+          
+         
+           {% empty %}
+         <div class="no-file">
+            There are no files for this folder yet.
+         </div>
+      {% endfor %} 
+   
+   </div>
+   
+
+
+<div class="add-new"><a href="/new_file/{{folder.id}}/" class="link new-link2">Add a new file for {{folder}}</a></div>
+{% endblock content%}

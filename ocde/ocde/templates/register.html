@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+	<title>Code file</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href='/'>HOME</a>
+        <a href='register' class='reg'>REGISTER</a>
+        <a href='login'>LOGIN</a>
+        <a href='code_area'>CODE</a>
+    </div>
+    <div class="msg">
+      {% for message in messages %}
+      <h2 class="err">{{ message }}</h2>
+      {% endfor %}
+  </div>
+<div class="reg-page">
+    <div class="form">
+      <form class="reg-form" action="register" method="post">
+        {% csrf_token %}
+        <input placeholder="First Name" type="text" id="first_name" name="first_name" tabindex="1" required autofocus>
+        <input placeholder="Last Name" type="text" id="last_name" name="last_name" tabindex="2" required>
+        <input placeholder="Username" type="text" id="username" name="username" tabindex="3" required>
+        <input placeholder="Email" type="email" id="email" name="email" tabindex="4" required>
+        <input placeholder="Password" type="password" id="password" name="password" tabindex="5" required>
+        <input placeholder="Confirm Password" type="password" id="password2" name="password2" tabindex="5" required></textarea>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Registering">REGISTER</button>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+</html>
